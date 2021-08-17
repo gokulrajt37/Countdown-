@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Document</title>
+</head>
+ 
+<body>
+    <script type="text/javascript">
+        function countDown(secs,elem){
+            var element = document.getElementById(elem);
+            element.innerHTML = "please wait for "  +secs+  "seconds";
+            if(secs < 1){
+                clearTimeout(timer);
+                element.innerHTML = '<h2>countdown compelete!</h2>';
+                element.innerHTML = '<a href="#"> "Happy independence day"</a>';
+            }
+            secs--;
+            var timer = setTimeout('countDown('+secs+',"'+elem+'")',1000);
+            
+            
+        }
+      
+      </script>
+      <div id="status" >
+          
+      </div>
+      <script type="text/javascript">countDown(10,"status");</script>
+
+</body>
+
+</html>
